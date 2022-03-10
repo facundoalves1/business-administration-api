@@ -1,0 +1,25 @@
+{
+  "name": "administration-api",
+  "version": "1.0.0",
+  "description": "API used for Administratoion app",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/facundoalves1/business-administration-api.git"
+  },
+  "author": "Facundo Alves",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/facundoalves1/business-administration-api/issues"
+  },
+  "homepage": "https://github.com/facundoalves1/business-administration-api#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
