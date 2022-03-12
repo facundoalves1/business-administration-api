@@ -1,15 +1,15 @@
 const express = require('express');
 const app = express();
-require('dotenv').config();
 
-
-console.log(process.env.DB_HOSTING);
 
 //DB Connection
 const connection = require('./database/db')
 
 //Importing Routes
 const authRoute = require('./routes/auth');
+
+//Middleware
+app.use(express.json());
 
 //Route Middlewares
 app.use('/api/user', authRoute);
