@@ -1,10 +1,17 @@
 const bcryptjs = require('bcryptjs');
 const connection = require('../database/db');
+const schema = require('../model/users');
 
 const router = require('express').Router();
 
 router.post('/register', async(req,res)=>{
 
+   try{
+      const validation = await schema.validate(req.body);
+      res.send(validation);
+   }catch(err){
+      res.send(err);
+   }
    const user_name = req.body.user;
    const password = req.body.password;
    const email = req.body.email;
